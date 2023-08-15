@@ -5,14 +5,9 @@
 }
 body{
     background-color:rgb(197, 202, 202);
-    /*background-image: url("../Img/fondo.png");*/
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
     width: 100%;
-}
-main{
-    padding-top: 4%;
 }
 @media screen and (max-width: 480px){
     main{
@@ -29,7 +24,10 @@ p{
     font-style: italic;
     font-size: 16px;
 }
-
+header{
+    position: sticky;
+    top: 0;
+}
 .menu{
     top: 0;
     background-color: rgb(89, 136, 223);
@@ -39,7 +37,7 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
     height: 80;
-    position: fixed;
+    /*position: fixed;*/
     font-weight: bold;
     z-index: 10;
 }
@@ -126,19 +124,22 @@ p{
     justify-content: center;
 }
 .fotoA{
-    height: 450px;
+    max-width: 600px;
+    width:100%;
 }
 .textMain{
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 1%;
-    width: 600px;
+    max-width: 600px;
+    width:100%;
 }
 .textMain p{
     margin: 0px;
     padding: 10px;
     background-color: rgba(224, 255, 255, 0.400);
     word-wrap: break-word;
+    max-width: 600px;
     width: 100%;
 }
 
@@ -182,7 +183,6 @@ p{
 .stats{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-auto-flow: row;
     grid-template-areas:
     "foto1 foto1 foto1 texto1 texto1"
@@ -193,6 +193,8 @@ p{
     margin: 0 auto;
     margin-top: 1%;
     justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 .foto1{
     grid-area: foto1;
@@ -224,7 +226,6 @@ p{
 @media screen and (max-width: 480px){
     .stats{
         grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr 2fr 1fr;
         grid-template-areas:
         "texto1"
         "foto1"
@@ -260,7 +261,6 @@ p{
 
 /* TROFEOS */
 .cabinet{
-    width: 100vw;
     height: 100vh;
     padding: 1%;
     display: grid;
@@ -274,6 +274,12 @@ p{
     "trofeos trofeos trofeo1 trofeo2 trofeo3"
     "trofeos trofeos trofeo4 trofeo5 trofeo6";
 }
+.cabinet div{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
 .texto{
     grid-area: texto;
     border: 1px solid black;
@@ -284,6 +290,8 @@ p{
     color: black;
     font-style: italic;
     font-size: 20px;
+    display: flex;
+    justify-content:right ;
 }
 .trofeos{
     grid-area: trofeos;
@@ -291,48 +299,21 @@ p{
 }
 .trofeo1{
     grid-area: trofeo1;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
 }
 .trofeo2{
     grid-area: trofeo2;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
 }
 .trofeo3{
     grid-area: trofeo3;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
 }
 .trofeo4{
     grid-area: trofeo4;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
 }
 .trofeo5{
-    grid-area: trofeo5;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    grid-area: trofeo5; 
 }
 .trofeo6{
     grid-area: trofeo6;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-.cabinet img{
-    height: 100%;
 }
 .trofeos img{
     height: 100%;
