@@ -9,7 +9,6 @@
     p{
       text-align: right;
     }
-  }
   
   .jugadores{
     display: flex;
@@ -42,6 +41,34 @@
       }
     }
   }
-  
+}
 
+@media screen and (max-width: 480px){
+  .jugadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
   
+      .fotoE{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+      }
+
+      img{
+        &:hover{
+          border: 2px solid black;
+          transform: translate(50px, 0px);
+        }
+      }
+    }
+  }
+}
+
+

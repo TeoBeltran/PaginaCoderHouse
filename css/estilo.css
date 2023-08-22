@@ -1,3 +1,4 @@
+/* npm run watch-css */
 /*Basicos*/
 * {
   margin: 0;
@@ -12,7 +13,7 @@ body {
 
 @media screen and (max-width: 480px) {
   main {
-    padding-top: 9%; }
+    padding-top: 1%; }
   body {
     width: 100vw; } }
 
@@ -27,35 +28,41 @@ header {
   position: sticky;
   top: 0; }
 
-.footer {
-  background-color: #5988df;
-  list-style-type: none;
-  text-align: right;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width: 100%;
-  height: 6%;
-  margin-bottom: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: flex-end; }
-  .footer li {
-    display: inline-block;
-    text-align: center; }
-    .footer li a {
-      margin: 6px;
-      padding: 12px;
-      color: black;
-      text-decoration: none;
-      display: inline-block; }
-      .footer li a:hover {
+/*
+  .footer{
+    background-color: rgb(89, 136, 223);
+    list-style-type: none;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    height: 6%;
+    margin-bottom: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+  
+    li{
+      display: inline-block;
+      text-align: center;
+      a{
+        margin: 6px;
+        padding: 12px;
         color: black;
-        background-color: lightblue;
-        border-radius: 10%; }
-  @media screen and (max-width: 480px) {
-    .footer {
+        text-decoration: none;
+        display: inline-block;
+        &:hover{
+          color:black;
+          background-color: lightblue;
+          border-radius: 10%;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 480px){
       width: 100%;
-      height: 6%; } }
-
+      height: 6%;
+    }
+  }*/
 /*Index*/
 .fotos {
   margin-top: 1%;
@@ -65,20 +72,24 @@ header {
   .fotos.fotoA {
     max-width: 600px;
     width: 100%; }
-
-.textMain {
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-bottom: 1%;
-  max-width: 600px;
-  width: 100%; }
-  .textMain p {
-    margin: 0px;
-    padding: 10px;
-    background-color: rgba(224, 255, 255, 0.4);
-    word-wrap: break-word;
+  .fotos .textMain {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
     max-width: 600px;
     width: 100%; }
+    .fotos .textMain p {
+      margin: 0px;
+      padding: 10px;
+      background-color: rgba(224, 255, 255, 0.4);
+      word-wrap: break-word;
+      max-width: 600px;
+      width: 100%; }
+
+@media screen and (max-width: 480px) {
+  .fotoA {
+    max-width: 480px;
+    width: 100%; } }
 
 /*Equipo*/
 .equipo {
@@ -88,87 +99,234 @@ header {
   background-color: rgba(224, 255, 255, 0.4); }
   .equipo p {
     text-align: right; }
+  .equipo .jugadores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .equipo .jugadores section {
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-bottom: 1%; }
+      .equipo .jugadores section img {
+        border: 2px solid rgba(224, 255, 255, 0); }
+        .equipo .jugadores section img:hover {
+          border: 2px solid black;
+          transform: translate(0px, -5px); }
+      .equipo .jugadores section h3 {
+        margin: 10px;
+        margin-left: 0;
+        color: black;
+        font-style: italic;
+        font-size: 16px;
+        word-wrap: break-word;
+        width: 100%; }
 
-.jugadores {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-  .jugadores section {
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 1%; }
-    .jugadores section img {
-      border: 2px solid rgba(224, 255, 255, 0); }
+@media screen and (max-width: 480px) {
+  .jugadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .jugadores section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px; }
+      .jugadores section .fotoE {
+        width: calc(50% - 10px);
+        margin-bottom: 20px; }
       .jugadores section img:hover {
         border: 2px solid black;
-        transform: translate(0px, -5px); }
-    .jugadores section h3 {
-      margin: 10px;
-      margin-left: 0;
-      color: black;
-      font-style: italic;
-      font-size: 16px;
-      word-wrap: break-word;
-      width: 100%; }
+        transform: translate(50px, 0px); } }
 
 /*Lista*/
 .lista {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  z-index: 1;
-  height: 100vh;
-  margin: 1%; }
+  align-items: center;
+  margin: 20px; }
+  .lista .foto1 {
+    width: 600px;
+    height: 400px;
+    animation-duration: 4s;
+    animation-name: efecto1;
+    animation-iteration-count: infinite; }
+  .lista .foto2 {
+    width: 600px;
+    height: 400px;
+    animation-duration: 4s;
+    animation-name: efecto2;
+    animation-iteration-count: infinite; }
+  .lista .foto3 {
+    width: 600px;
+    height: 400px;
+    animation-duration: 4s;
+    animation-name: efecto3;
+    animation-iteration-count: infinite; }
 
-.table thead th {
-  background-color: rgba(79, 201, 201, 0.4);
-  border: 1px solid black; }
+@keyframes efecto1 {
+  0% {
+    width: 600px;
+    height: 400px; }
+  50% {
+    width: 800px;
+    height: 400px; }
+  100% {
+    width: 600px;
+    height: 400px; } }
 
-.table tbody th,
-.table tbody td {
-  background-color: rgba(224, 255, 255, 0.4);
-  border: 1px solid black; }
+@keyframes efecto2 {
+  0% {
+    transform: rotateZ(0deg); }
+  50% {
+    transform: rotateZ(180deg); }
+  100% {
+    transform: rotateZ(0deg); } }
+
+@keyframes efecto3 {
+  0% {
+    transform: rotateZ(0deg); }
+  50% {
+    transform: rotateZ(-180deg); }
+  100% {
+    transform: rotateZ(0deg); } }
+
+@media screen and (max-width: 480px) {
+  .lista {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .lista .foto1 {
+      width: 200px;
+      height: 150px;
+      animation-duration: 4s;
+      animation-name: efecto1;
+      animation-iteration-count: infinite;
+      margin: 40px; }
+    .lista .foto2 {
+      width: 200px;
+      height: 150px;
+      animation-duration: 4s;
+      animation-name: efecto2;
+      animation-iteration-count: infinite;
+      margin: 40px; }
+    .lista .foto3 {
+      width: 200px;
+      height: 150px;
+      animation-duration: 4s;
+      animation-name: efecto3;
+      animation-iteration-count: infinite;
+      margin: 40px; }
+  @keyframes efecto1 {
+    0% {
+      width: 200px; }
+    50% {
+      width: 300px; }
+    100% {
+      width: 200px; } }
+  @keyframes efecto2 {
+    0% {
+      transform: rotateZ(0deg); }
+    50% {
+      transform: rotateZ(180deg); }
+    100% {
+      transform: rotateZ(0deg); } }
+  @keyframes efecto3 {
+    0% {
+      transform: rotateZ(0deg); }
+    50% {
+      transform: rotateZ(-180deg); }
+    100% {
+      transform: rotateZ(0deg); } } }
 
 /*Estad*/
-.stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-flow: row;
-  grid-template-areas: "foto1 foto1 foto1 texto1 texto1" "foto1 foto1 foto1 texto1 texto1" "texto2 texto2 foto2 foto2 foto2" "texto2 texto2 foto2 foto2 foto2";
-  gap: 10px;
-  margin: 0 auto;
-  margin-top: 1%;
-  justify-content: center;
-  max-width: 1600px;
-  margin: 0 auto; }
-  .stats .foto1 {
-    grid-area: foto1; }
-  .stats .texto1 {
-    grid-area: texto1;
-    background-color: lightblue; }
-  .stats .texto2 {
-    grid-area: texto2;
-    background-color: lightblue; }
-  .stats .foto2 {
-    grid-area: foto2; }
-  .stats img {
-    width: 100%; }
-  .stats p {
-    font-weight: bold;
-    color: black;
-    font-style: italic;
-    font-size: 20px; }
-  @media screen and (max-width: 480px) {
-    .stats {
+/*.stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "foto1 foto1 foto1 texto1 texto1"
+      "foto1 foto1 foto1 texto1 texto1"
+      "texto2 texto2 foto2 foto2 foto2"
+      "texto2 texto2 foto2 foto2 foto2";
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 1%;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+  
+    .foto1{
+      grid-area: foto1;
+    }
+  
+    .texto1{
+      grid-area: texto1;
+      background-color: lightblue;
+    }
+  
+    .texto2{
+      grid-area: texto2;
+      background-color: lightblue;
+    }
+  
+    .foto2{
+      grid-area: foto2;
+    }
+  
+    img{
+      width: 100%;
+    }
+  
+    p{
+      font-weight: bold;
+      color: black;
+      font-style: italic;
+      font-size: 20px;
+    }
+  
+    @media screen and (max-width: 480px){
       grid-template-columns: 1fr;
-      grid-template-areas: "texto1" "foto1" "texto2" "foto2"; }
-      .stats p {
-        font-size: 1rem; }
-      .stats img {
-        height: auto; } }
+      grid-template-areas:
+        "texto1"
+        "foto1"
+        "texto2"
+        "foto2";
+  
+      p{
+        font-size: 1rem;
+      }
+  
+      img{
+        height: auto;
+      }
+    }
+  }*/
+.estad .textos {
+  padding: 80px;
+  padding-top: 10px; }
+  .estad .textos p {
+    padding: 20px;
+    padding-top: 20px;
+    background-color: #b2dae6; }
 
-.estad section {
-  padding: 100px; }
+.estad .cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px; }
+  .estad .cards .card {
+    background-color: #b2dae6; }
+
+@media screen and (max-width: 480px) {
+  .estad .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px; }
+    .estad .cards .card {
+      background-color: #b2dae6; } }
 
 /*Trofeos*/
 .cabinet {

@@ -1,30 +1,144 @@
 /*Lista*/
 
-.lista{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: 1;
-    height: 100vh;
-    margin: 1%;
-  }
-  
-  .table{
-    thead {
-      th {
-        background-color: rgba(79, 201, 201, 0.4);
-        border: 1px solid black;
-      }
-    }
-  
-    tbody {
-      th,
-      td {
-        background-color: rgba(224, 255, 255, 0.4);
-        border: 1px solid black;
-      }
-    }
-  }
-  
+.lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 
+  .foto1{
+    width: 600px;
+    height: 400px;
+    animation-duration: 4s;
+    animation-name: efecto1;
+    animation-iteration-count: infinite;
+  }
+
+  .foto2{
+    width: 600px;
+    height: 400px;
+    animation-duration: 4s;
+    animation-name: efecto2;
+    animation-iteration-count: infinite;
+  }
+
+  .foto3{
+    width: 600px;
+    height: 400px;
+    animation-duration: 4s;
+    animation-name: efecto3;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes efecto1{
+    0%{
+      width: 600px;
+      height: 400px;
+    }
+    50%{
+      width: 800px;
+      height: 400px;
+    }
+    100%{
+      width: 600px;
+      height: 400px;
+    }
+  }
+
+  @keyframes efecto2{
+    0%{
+      transform: rotateZ(0deg);
+    }
+    50%{
+      transform: rotateZ(180deg);
+    }
+    100%{
+      transform: rotateZ(0deg);
+    }
+  }
+
+  @keyframes efecto3{
+    0%{
+      transform: rotateZ(0deg);
+    }
+    50%{
+      transform: rotateZ(-180deg);
+    }
+    100%{
+      transform: rotateZ(0deg);
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  .lista {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   
+    .foto1{
+      width: 200px;
+      height: 150px;
+      animation-duration: 4s;
+      animation-name: efecto1;
+      animation-iteration-count: infinite;
+      margin: 40px;
+    }
+  
+    .foto2{
+      width: 200px;
+      height: 150px;
+      animation-duration: 4s;
+      animation-name: efecto2;
+      animation-iteration-count: infinite;
+      margin: 40px;
+    }
+  
+    .foto3{
+      width: 200px;
+      height: 150px;
+      animation-duration: 4s;
+      animation-name: efecto3;
+      animation-iteration-count: infinite;
+      margin: 40px;
+    }
+  
+    @keyframes efecto1{
+      0%{
+        width: 200px;
+      }
+      50%{
+        width: 300px;
+      }
+      100%{
+        width: 200px;
+      }
+    }
+  
+    @keyframes efecto2{
+      0%{
+        transform: rotateZ(0deg);
+      }
+      50%{
+        transform: rotateZ(180deg);
+      }
+      100%{
+        transform: rotateZ(0deg);
+      }
+    }
+  
+    @keyframes efecto3{
+      0%{
+        transform: rotateZ(0deg);
+      }
+      50%{
+        transform: rotateZ(-180deg);
+      }
+      100%{
+        transform: rotateZ(0deg);
+      }
+    }
+  }
+}
