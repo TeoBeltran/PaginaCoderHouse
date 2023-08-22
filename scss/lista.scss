@@ -1,0 +1,30 @@
+/*Lista*/
+
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+    height: 100vh;
+    margin: 1%;
+  }
+  
+  .table{
+    thead {
+      th {
+        background-color: rgba(79, 201, 201, 0.4);
+        border: 1px solid black;
+      }
+    }
+  
+    tbody {
+      th,
+      td {
+        background-color: rgba(224, 255, 255, 0.4);
+        border: 1px solid black;
+      }
+    }
+  }
+  
+
+  

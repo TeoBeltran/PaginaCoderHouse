@@ -1,0 +1,33 @@
+/*Index*/
+
+.fotos{
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    &.fotoA{
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+  
+  .textMain{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    max-width: 600px;
+    width: 100%;
+  
+    p{
+      margin: 0px;
+      padding: 10px;
+      background-color: rgba(224, 255, 255, 0.400);
+      word-wrap: break-word;
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+  
+
+  

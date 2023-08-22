@@ -1,0 +1,47 @@
+/*Equipo*/
+
+.equipo{
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(224, 255, 255, 0.400);
+  
+    p{
+      text-align: right;
+    }
+  }
+  
+  .jugadores{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    section{
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-bottom: 1%;
+  
+      img{
+        border: 2px solid rgba(224, 255, 255, 0);
+  
+        &:hover{
+          border: 2px solid black;
+          transform: translate(0px, -5px);
+        }
+      }
+      
+  
+      h3{
+        margin: 10px;
+        margin-left: 0;
+        color: black;
+        font-style: italic;
+        font-size: 16px;
+        word-wrap: break-word;
+        width: 100%;
+      }
+    }
+  }
+  
+
+  
