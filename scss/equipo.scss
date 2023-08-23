@@ -60,13 +60,6 @@
         width: calc(50% - 10px);
         margin-bottom: 20px;
       }
-
-      img{
-        &:hover{
-          border: 2px solid black;
-          transform: translate(50px, 0px);
-        }
-      }
     }
   }
 }
