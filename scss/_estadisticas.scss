@@ -2,14 +2,8 @@
   
 .estad{
   .textos{
-    padding: 80px;
-    padding-top: 10px;
-    
-    p{
-      padding: 20px;
-      padding-top: 20px;
-      background-color: rgb(178, 218, 230);
-    }
+    padding: 20px;
+    background-color: $textbg2;
   }
 
   .cards{
@@ -18,13 +12,16 @@
     padding: 10px;
 
     .card{
-      background-color: rgb(178, 218, 230);
+      background-color: $textbg2;
     }
   }
 }
 
 @media screen and (max-width: 480px){
   .estad{
+    .textos{
+      padding: 0;
+    }
     .cards{
       display: flex;
       flex-direction: column;

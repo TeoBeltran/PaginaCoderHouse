@@ -1,16 +1,22 @@
 /*Index*/
 
 .fotos{
-    margin-top: 1%;
+  margin-top: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &.fotoA{
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .inicio1{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  
-    &.fotoA{
-      max-width: 600px;
-      width: 100%;
-    }
-  
+    max-width: 1400px;
+    margin-bottom: 6rem;
+  }
+
   .textMain{
     margin-left: 2%;
     margin-right: 2%;
@@ -21,7 +27,7 @@
     p{
       margin: 0px;
       padding: 10px;
-      background-color: rgba(224, 255, 255, 0.400);
+      background-color: $textbg;
       word-wrap: break-word;
       max-width: 600px;
       width: 100%;
@@ -34,7 +40,10 @@
     max-width: 480px;
     width: 100%;
   }
+  .inicio1{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
 }
-  
 
-  
