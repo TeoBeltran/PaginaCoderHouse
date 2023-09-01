@@ -91,7 +91,7 @@ header {
         margin-left: 0;
         color: black;
         font-style: italic;
-        font-size: 1,2rem;
+        font-size: 1,2;
         word-wrap: break-word;
         width: 100%; }
 
@@ -180,34 +180,42 @@ header {
 
 /*Trofeos*/
 .cabinet {
-  padding: 1%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px;
-  grid-auto-flow: row;
-  grid-template-areas: "texto texto texto texto texto" "trofeos trofeos trofeo1 trofeo2 trofeo3" "trofeos trofeos trofeo4 trofeo5 trofeo6"; }
-  .cabinet div {
+  margin: 25px; }
+  .cabinet .textoTr {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 25px;
+    border: 1px solid black;
+    background-color: #b2dae6; }
+    .cabinet .textoTr p {
+      font-weight: bold;
+      color: black;
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: right; }
+  .cabinet .imagenTr {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    grid-template-areas: "trofeo1 trofeo1 trofeo2 trofeo3 trofeo7" "trofeo1 trofeo1 trofeo6 trofeo5 trofeo4"; }
+  .cabinet .trofeo {
+    background-color: rgba(224, 255, 255, 0.4);
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center; }
-  .cabinet .texto {
-    grid-area: texto;
-    border: 1px solid black;
-    background-color: #b2dae6; }
-    .cabinet .texto p {
-      font-weight: bold;
-      color: black;
-      font-style: italic;
-      font-size: 20px;
-      display: flex;
-      justify-content: right; }
-  .cabinet .trofeos {
-    grid-area: trofeos;
-    border: 1px solid black; }
+    .cabinet .trofeo img {
+      max-width: 100%;
+      max-height: 100%; }
   .cabinet .trofeo1 {
-    grid-area: trofeo1; }
+    grid-area: trofeo1;
+    background-color: transparent;
+    border: none; }
+    .cabinet .trofeo1 img {
+      border: 1px solid black; }
   .cabinet .trofeo2 {
     grid-area: trofeo2; }
   .cabinet .trofeo3 {
@@ -218,19 +226,24 @@ header {
     grid-area: trofeo5; }
   .cabinet .trofeo6 {
     grid-area: trofeo6; }
-  .cabinet .trofeo img:hover {
-    transform: scale(2, 2); }
-  .cabinet .trofeos img {
-    height: 100%;
-    width: 100%; }
+  .cabinet .trofeo7 {
+    grid-area: trofeo7; }
+  .cabinet .trofeo:not(.trofeo1):hover img {
+    transform: scale(2); }
 
 @media screen and (max-width: 480px) {
   .cabinet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px;
-    grid-auto-flow: row;
-    grid-template-areas: "texto texto" "trofeos trofeo1" "trofeos trofeo2" "trofeo3 trofeo4" "trofeo5 trofeo6"; }
-    .cabinet .texto p {
-      font-size: 1rem; } }
+    margin: 0; }
+    .cabinet .textoTr {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 25px; }
+      .cabinet .textoTr .texto p {
+        font-size: 1rem; }
+    .cabinet .imagenTr {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "trofeo1 trofeo2" "trofeo1 trofeo6" "trofeo3 trofeo7" "trofeo4 trofeo5"; } }

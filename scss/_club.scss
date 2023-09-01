@@ -18,10 +18,10 @@
       height: 300px;
       h1{
         margin: 5px;
-        font-size: 2rem;
+        @include size3;
       }
       p{
-        font-size: 1.4rem;
+        @include size2;
       }
     }
     .fotoCl{
