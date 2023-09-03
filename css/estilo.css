@@ -247,3 +247,11 @@ header {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, auto);
       grid-template-areas: "trofeo1 trofeo2" "trofeo1 trofeo6" "trofeo3 trofeo7" "trofeo4 trofeo5"; } }
+
+/* Error 404 */
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
