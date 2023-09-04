@@ -156,16 +156,19 @@ header {
       animation: none; } }
 
 /*Estad*/
-.estad .textos {
-  padding: 20px;
-  background-color: #b2dae6; }
-
-.estad .cards {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px; }
-  .estad .cards .card {
+.estad {
+  margin: 50px;
+  margin-left: 100px;
+  margin-right: 100px; }
+  .estad .textos {
+    padding: 20px;
     background-color: #b2dae6; }
+  .estad .cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px; }
+    .estad .cards .card {
+      background-color: #b2dae6; }
 
 @media screen and (max-width: 480px) {
   .estad .textos {
@@ -254,4 +257,25 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
+  height: 100vh;
+  text-align: center; }
+  .error h1, .error h2 {
+    color: #0275d8; }
+
+/* Contact */
+.contacto {
+  height: 50vh;
+  margin: 200px; }
+  .contacto .enviar {
+    margin-top: 20px;
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 5px solid #c5caca;
+    border-radius: 10px; }
+  .contacto .enviar:hover {
+    border: 5px solid #125896; }
+  .contacto .mensaje textarea {
+    resize: none; }
